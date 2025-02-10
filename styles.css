@@ -1,0 +1,425 @@
+/* Colors Selections  */
+:root {
+  --primary-color: #4a90e2; /* A refined blue for a modern look */
+  --primary-hover: #357abd; /* A slightly darker blue for hover effects */
+  --background: #121010; /* A light, neutral background for better readability */
+  --surface: #0c0909; /* White surfaces for a clean, minimal feel */
+  --surface-hover: #e0e0e0; /* A subtle gray for hover effects */
+  --text-primary: #a09595; /* Dark gray for strong readability */
+  --text-secondary: #757575; /* Muted gray for secondary text */
+  --modal-background: rgba(0, 0, 0, 0.7); /* Softer modal background */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+nav {
+  background: var(--surface);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.logo-text {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.brand-logo {
+  font-family: "Pacifico", cursive;
+  color: #64abf2;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.brand-logo span {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.brand-logo span:hover {
+  transform: translateY(-5px);
+}
+
+.search-section {
+  flex: 1;
+  margin: 0;
+  padding-left: 10rem;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-section {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    max-width: 100%;
+  }
+}
+
+/*Scrollbar  Styling */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background:rgb(130, 128, 128); */
+  background: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  text-align: center;
+  padding: 30px 0;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 15px 25px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(194, 148, 250, 0.3);
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  background: var(--primary-color);
+  color: var(--background);
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.recipe-card {
+  background: var(--surface);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  background: var(--surface-hover);
+}
+
+.recipe-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .recipe-image {
+  transform: scale(1.05);
+}
+
+.recipe-content {
+  padding: 20px;
+}
+
+.recipe-title {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.recipe-info {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 15px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.recipe-info p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.tag {
+  background: var(--primary-color);
+  color: var(--background);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+}
+
+/* Main Modal Styling  */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--modal-background);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: var(--surface);
+  margin: 3% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 25px;
+  max-height: 94vh;
+  overflow-y: auto;
+  color: var(--text-primary);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.modal-content h3 {
+  margin: 25px 0 15px 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  color: var(--text-secondary);
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.close:hover {
+  color: var(--primary-color);
+  background: rgba(0, 0, 0, 0.4);
+  transform: rotate(90deg);
+}
+
+.instructions {
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+.instruction-step {
+  margin: 15px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.instruction-step:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 15px;
+}
+
+li {
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+.error {
+  color: #ff4444;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1rem;
+  background: rgba(255, 68, 68, 0.1);
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 30px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--surface);
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .modal-content {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+}
