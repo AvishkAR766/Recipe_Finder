@@ -140,6 +140,6 @@ function showRecipeDetails(recipe) {
 
 
 window.onload = function () {
-  searchInput.value = "Biryani";
+  searchInput.value = "Noodles";
   searchRecipes();
 };
